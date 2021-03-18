@@ -1,5 +1,3 @@
 # remove compile files
-*~
-*#
-*\*
-DS_S
+DS
+sml?
