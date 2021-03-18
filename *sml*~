@@ -1,0 +1,495 @@
+Standard ML of New Jersey (64-bit) v110.99 [built: Thu Dec 24 11:47:23 2020]
+- dates = [(2020/7/12),(2020/7/22),(2320/7/12)]
+= ;
+stdIn:1.2-1.7 Error: unbound variable or constructor: dates
+stdIn:1.12-1.21 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         'Z[INT] * 'Y[INT]
+  in expression:
+    2020 / 7
+stdIn:1.12-1.21 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         _ * 'Z[INT]
+  in expression:
+    2020 / 7 / 12
+stdIn:1.24-1.33 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         'Z[INT] * 'Y[INT]
+  in expression:
+    2020 / 7
+stdIn:1.24-1.33 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         _ * 'Z[INT]
+  in expression:
+    2020 / 7 / 22
+stdIn:1.36-1.45 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         'Z[INT] * 'Y[INT]
+  in expression:
+    2320 / 7
+stdIn:1.36-1.45 Error: operator and operand do not agree [overload - bad instantiation]
+  operator domain: real * real
+  operand:         _ * 'Z[INT]
+  in expression:
+    2320 / 7 / 12
+- use "number_in_month";
+[use failed: 'number_in_month' does not exist or is unreadable]
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:16.29-16.33 Error: type constructor list given 0 arguments, wants 1
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- number_in_month([[2020,12,12],[2020,12,22],[2020,2,12]],12);
+stdIn:4.1-4.16 Error: unbound variable or constructor: number_in_month
+- dates = [[2020,12,12],[2020,12,22],[2020,2,12]];
+stdIn:1.2-1.7 Error: unbound variable or constructor: dates
+- val dates = [[2020,12,12],[2020,12,22],[2020,2,12]];
+val dates = [[2020,12,12],[2020,12,22],[2020,2,12]] : int list list
+- number_in_month(dates, 12);
+stdIn:5.1-5.16 Error: unbound variable or constructor: number_in_month
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) (hd dates)
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) (hd dates)
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:16.29-16.33 Error: type constructor list given 0 arguments, wants 1
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.11-24.25 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) (hd dates)
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: int list * int list
+  operand:         int list * int
+  in expression:
+    hd dates = month
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if hd dates = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- val dates = [[2020,12,12],[2020,12,22],[2020,2,12]];
+val dates = [[2020,12,12],[2020,12,22],[2020,2,12]] : int list list
+- hd dates
+= ;
+val it = [2020,12,12] : int list
+- #2 hd dates
+= ;
+stdIn:13.1-13.12 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         'X list -> 'X
+  in expression:
+    (fn {2=2,...} => 2) hd
+- #2 (hd(dates));
+stdIn:1.2-1.16 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) (hd dates)
+- val dates = [[2020,12,12],[2020,12,22],[2020,2,12]];
+val dates = [[2020,12,12],[2020,12,22],[2020,2,12]] : int list list
+- #2 (hd(dates));
+stdIn:15.1-15.15 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) (hd dates)
+- date = hd dates;
+stdIn:1.2-1.6 Error: unbound variable or constructor: date
+- val date = hd dates;
+val date = [2020,12,12] : int list
+- #2 date;
+stdIn:16.1-16.8 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {2=2,...} => 2) date
+- #1 date;
+stdIn:1.2-1.9 Error: operator and operand do not agree [type mismatch]
+  operator domain: {1:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {1=1,...} => 1) date
+- List.nth (date, 2);
+[autoloading]
+[library $SMLNJ-BASIS/basis.cm is stable]
+[library $SMLNJ-BASIS/(basis.cm):basis-common.cm is stable]
+[autoloading done]
+val it = 12 : int
+- hd date;
+val it = 2020 : int
+- date;
+val it = [2020,12,12] : int list
+- #1 date;
+stdIn:19.1-19.8 Error: operator and operand do not agree [type mismatch]
+  operator domain: {1:'Y; 'Z}
+  operand:         int list
+  in expression:
+    (fn {1=1,...} => 1) date
+- #0 date;
+= ;
+stdIn:1.3-1.10 Error: syntax error: deleting  INT0 IDA SEMICOLON
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: (int * int * int) * (int * int * int)
+  operand:         (int * int * int) * int
+  in expression:
+    List.nth (hd dates,2) = month
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- dates;
+val it = [[2020,12,12],[2020,12,22],[2020,2,12]] : int list list
+- List.nth(hd(dates), 2);
+val it = 12 : int
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:22.6-23.35 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    count date
+week2hw.sml:25.6-30.36 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: int list * int list
+  operand:         int list * int
+  in expression:
+    date = month
+week2hw.sml:27.3-28.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.31 Error: syntax error: inserting  RPAREN
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.13-65.16
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.31 Error: syntax error: inserting  RPAREN
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.13-65.16
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: (int * int * int) * (int * int * int)
+  operand:         (int * int * int) * int
+  in expression:
+    List.nth (hd dates,2) = month
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:24.6-29.36 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list * int
+  operand:         (int * int * int) * 'Y[INT]
+  in expression:
+    List.nth (hd dates,2)
+week2hw.sml:26.3-27.36 Error: operator is not a function [overload - bad instantiation]
+  operator: 'Z[INT]
+  in expression:
+    1 number_in_month
+week2hw.sml:20.2-29.36 Error: types of if branches do not agree [overload - bad instantiation]
+  then branch: 'Z[INT]
+  else branch: bool
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count = count + (1 number_in_month) (tl dates,month)
+  else number_in_month (tl dates,month)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:18.53 Error: syntax error: replacing  COLON with  EQUALOP
+[unexpected exception: Compile]
+
+uncaught exception Compile [Compile: "syntax error"]
+  raised at: ../compiler/Parse/main/smlfile.sml:19.24-19.46
+             ../compiler/TopLevel/interact/evalloop.sml:45.54
+             ../compiler/TopLevel/interact/evalloop.sml:306.20-306.23
+             ../compiler/TopLevel/interact/interact.sml:65.13-65.16
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if (fn {2=2,...} => 2) (hd dates) = month
+  then count (x + 1,tl dates)
+  else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list * int
+  operand:         (int * int * int) * 'Y[INT]
+  in expression:
+    List.nth (hd dates,2)
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count (x + 1,tl dates)
+  else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list * int
+  operand:         (int * int * int) * 'Y[INT]
+  in expression:
+    List.nth (hd dates,2)
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count (x + 1,tl dates)
+  else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         'X list -> 'X
+  in expression:
+    (fn {2=2,...} => 2) hd
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if ((fn {2=2,...} => 2) hd) dates = month
+  then count (x + 1,tl dates)
+  else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if 2 = month then count (x + 1,tl dates) else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+stdIn:31.18 Error: unbound variable or constructor: l
+stdIn:31.1-31.19 Error: operator is not a function [tycon mismatch]
+  operator: unit
+  in expression:
+    (use "week2hw.sml") <errorvar>
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list * int
+  operand:         (int * int * int) * 'Y[INT]
+  in expression:
+    List.nth (hd dates,2)
+week2hw.sml:19.6-27.26 Error: types of if branches do not agree [circularity]
+  then branch: int * (int * int * int) list -> 'Z
+  else branch: 'Z
+  in expression:
+    if null dates
+  then count
+  else if List.nth (hd dates,2) = month
+  then count (x + 1,tl dates)
+  else count (x,tl dates)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list * int
+  operand:         (int * int * int) * 'Y[INT]
+  in expression:
+    List.nth (hd dates,2)
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:23.3-27.26 Error: operator and operand do not agree [type mismatch]
+  operator domain: {2:'Y; 'Z}
+  operand:         'X list -> 'X
+  in expression:
+    (fn {2=2,...} => 2) hd
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+val is_older = fn : int list * int list -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val it = () : unit
+- number_in_month([[2020,12,12],[2020,12,22],[2020,2,12]], 12);
+stdIn:36.1-36.61 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: (int * int * int) list * int
+  operand:         'Z[INT] list list * 'Y[INT]
+  in expression:
+    number_in_month
+    ((2020 :: 12 :: 12 :: nil) ::
+       (2020 :: 12 :: 22 :: nil) :: (2020 :: 2 :: 12 :: nil) :: nil,12)
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:19.6-27.26 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: 'Z list
+  operand:         'Y list -> 'Y list
+  in expression:
+    null tl
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+val is_older = fn : int list * int list -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val it = () : unit
+- number_in_month([[2020,12,12],[2020,12,22],[2020,2,12]], 12);
+stdIn:38.1-38.61 Error: operator and operand do not agree [tycon mismatch]
+  operator domain: (int * int * int) list * int
+  operand:         'Z[INT] list list * 'Y[INT]
+  in expression:
+    number_in_month
+    ((2020 :: 12 :: 12 :: nil) ::
+       (2020 :: 12 :: 22 :: nil) :: (2020 :: 2 :: 12 :: nil) :: nil,12)
+- use "week2hw.sml";
+[opening week2hw.sml]
+week2hw.sml:29.11-29.19 Error: unbound variable or constructor: datelist
+val it = () : unit
+- use "week2hw.sml";
+[opening week2hw.sml]
+val is_older = fn : int list * int list -> bool
+val number_in_month = fn : (int * int * int) list * int -> int
+val it = () : unit
+- is_older([2, 12,12], [2,21,21]);
+stdIn:40.59-43.2 Error: syntax error: deleting  RPAREN SEMICOLON SEMICOLON
+- is_older([2,12,12], [2,21,21]);
