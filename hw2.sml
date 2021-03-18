@@ -145,3 +145,7 @@ fun officiate_challenge (cards, moves, goal) =
 				| y::ys => case (card_value(y) + sum_cards(held) > goal) of
 					      true => score_challenge(y::held, goal)
 					    | false => movesfun(ys, y::held, xs)
+    in
+	movesfun(cards, [], moves)
+    end
+	

@@ -1,6 +1,8 @@
 # Standard ML thing #
 ################
-*.sml
+*.sml~
+*#
+*.sml?
 
 # Compiled source #
 ###################
