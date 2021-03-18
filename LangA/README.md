@@ -1,2 +1,2 @@
-# UofW
-My solutions to Coursera's University of Washington Programming Languages Courses
+# Languages Part A
+My solutions to Programming Languages Part A by the University of Washington
