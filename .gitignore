@@ -3,6 +3,7 @@
 *.sml~
 *#
 *.sml?
+\*sml\*
 
 # Compiled source #
 ###################
