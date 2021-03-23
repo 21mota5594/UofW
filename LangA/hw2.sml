@@ -35,17 +35,14 @@ fun get_substitutions2 (slist, s) =
     end
 
 
-	    
-fun similar_names (lists, {first, middle, last}) =
-    let fun add_records (slist, {first, middle, last}) =
-	let fun aux (names, acc) =
-		case names of
-		    [] => acc
-		  | x::xs => aux(xs, [{first=x, middle=middle, last=last}] @ acc)
-	in  aux(slist, [])
-	end
-    in add_records(get_substitutions1(lists, first), {first=first, middle=middle, last=last})
-    end
+fun similar_names (subs, {first, middle, last}) =
+  let fun aux(subs, acc) =
+    case subs of
+      [] => acc
+      | (x::xs) => aux(xs, acc @ [{first=x, middle=middle, last=last}]) 
+  in
+    aux(get_substitutions2(subs, first), [{first=first, middle=middle, last=last}])
+  end
 
 (* you may assume that Num is always used with values 2, 3, ..., 10
    though it will not really come up *)
@@ -86,7 +83,10 @@ fun all_same_color (cards) =
     case cards of
 	[] => true
      | last::[] => true
-     | head::(neck::rest) => card_color(head) = card_color(neck) andalso all_same_color(rest)
+     | head::(neck::rest) => case card_color head = card_color neck of
+				 true => all_same_color (neck::rest)
+			       | false => false
+					      
 
 fun sum_cards (cards) =
     let fun aux (cards, acc) =
@@ -98,15 +98,16 @@ fun sum_cards (cards) =
     end
 	
 fun score (cards, goal) =
-    let fun check(cards) =
-	    case all_same_color(cards) of
-		true => 2
-	      | false => 1
+    let fun preli_score (sum) =
+	    case sum > goal of
+		true => (sum - goal) * 3
+	      | false => goal - sum
     in
-    case sum_cards(cards) > goal of
-	true => (sum_cards(cards) - goal) * 3 div check(cards) 
-     | false => (goal - sum_cards(cards)) 
+	case all_same_color(cards) of
+	    true => preli_score(sum_cards(cards)) div 2
+	  | false => preli_score(sum_cards(cards))
     end
+	
 	
 fun officiate (cards, moves, goal) =
     let fun movesfun (cards, held, moves) =
