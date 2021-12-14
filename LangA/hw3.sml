@@ -98,16 +98,6 @@ fun match (v, p) =
 				 else NONE
       | _ => NONE
 				     
-      
-(*fun first_match a =
-    fn b => case b of
-		[] => NONE
-	      | x::xs' => case match(a,x) of
-			      SOME y => SOME y
-			    | NONE => first_match(a) xs'*)
-fun first_match a b =
-    SOME (first_answer (fn x => match(a,x)) b)
-    handle NoAnswer => NONE
     
 fun first_match a b =
     case first_answer (fn x => match(a,x)) b of
